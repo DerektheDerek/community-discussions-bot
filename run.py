@@ -9,7 +9,10 @@ import asyncio
 from sqlite3 import Error
 from discord.ext.commands import Bot
 
-TOKEN = 'YOUR TOKEN HERE' # TODO: just read this from a file
+token_file = open(r"token.txt", "r")
+TOKEN = token_file.read()
+token_file.close()
+
 BOT_PREFIX = (".")
 logging.basicConfig(level=logging.INFO)
 
